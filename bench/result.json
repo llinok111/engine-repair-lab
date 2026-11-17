@@ -1,0 +1,140 @@
+{
+  "tool": "engine-repair-lab",
+  "generatedBy": "bench/bench.mjs",
+  "reps": 7,
+  "warmup": 1,
+  "note": "times in ms, one full horizon (2 s, 6 chains) per rep",
+  "chains": [
+    {
+      "id": "chain-1",
+      "certificate": {
+        "min": 85.482,
+        "median": 88.64,
+        "p95": 107.821,
+        "stddev": 7.744,
+        "relStddevPct": 8.4
+      },
+      "discrete240": {
+        "min": 3.449,
+        "median": 4.751,
+        "p95": 12.455,
+        "stddev": 2.875,
+        "relStddevPct": 50.009
+      },
+      "coldCertificateMs": 107.821
+    },
+    {
+      "id": "chain-2",
+      "certificate": {
+        "min": 87.577,
+        "median": 87.943,
+        "p95": 102.519,
+        "stddev": 5.093,
+        "relStddevPct": 5.639
+      },
+      "discrete240": {
+        "min": 3.385,
+        "median": 3.521,
+        "p95": 3.558,
+        "stddev": 0.054,
+        "relStddevPct": 1.542
+      },
+      "coldCertificateMs": 90.733
+    },
+    {
+      "id": "chain-3",
+      "certificate": {
+        "min": 91.143,
+        "median": 91.53,
+        "p95": 95.523,
+        "stddev": 1.426,
+        "relStddevPct": 1.547
+      },
+      "discrete240": {
+        "min": 3.379,
+        "median": 3.515,
+        "p95": 3.608,
+        "stddev": 0.066,
+        "relStddevPct": 1.89
+      },
+      "coldCertificateMs": 91.395
+    },
+    {
+      "id": "chain-4",
+      "certificate": {
+        "min": 81.384,
+        "median": 81.957,
+        "p95": 84.138,
+        "stddev": 0.854,
+        "relStddevPct": 1.04
+      },
+      "discrete240": {
+        "min": 3.423,
+        "median": 3.512,
+        "p95": 3.556,
+        "stddev": 0.041,
+        "relStddevPct": 1.167
+      },
+      "coldCertificateMs": 82.061
+    },
+    {
+      "id": "chain-5",
+      "certificate": {
+        "min": 81.894,
+        "median": 82.07,
+        "p95": 82.153,
+        "stddev": 0.096,
+        "relStddevPct": 0.117
+      },
+      "discrete240": {
+        "min": 3.392,
+        "median": 3.482,
+        "p95": 3.579,
+        "stddev": 0.058,
+        "relStddevPct": 1.655
+      },
+      "coldCertificateMs": 82.074
+    },
+    {
+      "id": "chain-6",
+      "certificate": {
+        "min": 73.455,
+        "median": 73.847,
+        "p95": 76.275,
+        "stddev": 0.897,
+        "relStddevPct": 1.21
+      },
+      "discrete240": {
+        "min": 3.5,
+        "median": 3.549,
+        "p95": 4.115,
+        "stddev": 0.207,
+        "relStddevPct": 5.719
+      },
+      "coldCertificateMs": 76.275
+    }
+  ],
+  "aggregate": {
+    "certificate": {
+      "min": 73.455,
+      "median": 85.482,
+      "p95": 99.61,
+      "stddev": 7.684,
+      "relStddevPct": 8.989
+    },
+    "discrete240": {
+      "min": 3.379,
+      "median": 3.532,
+      "p95": 5.682,
+      "stddev": 1.44,
+      "relStddevPct": 36.978
+    },
+    "coldCertificateMs": 108.031,
+    "coldDiscrete240Ms": 8.449,
+    "speedRatioDiscreteVsCertificate": 0.041
+  },
+  "sweep": {
+    "certificateEvents": 19,
+    "discrete240Hits": 19
+  }
+}

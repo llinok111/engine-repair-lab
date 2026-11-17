@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>engine-repair-lab — certificate locates, Rapier decides</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font: 14px/1.45 ui-sans-serif, system-ui, sans-serif; background: #0b0f14; color: #dbe4ee; }
+  #app { display: grid; grid-template-columns: 1fr 340px; height: 100vh; }
+  #view { position: relative; }
+  #hud { padding: 16px 18px; border-left: 1px solid #1d2733; overflow: auto; }
+  h1 { font-size: 15px; margin: 0 0 4px; letter-spacing: .02em; }
+  .sub { color: #7d8ea3; font-size: 12px; margin-bottom: 14px; }
+  .row { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px dotted #1d2733; }
+  .k { color: #8fa3b8; } .v { font-variant-numeric: tabular-nums; }
+  .ok { color: #52d1a4; } .bad { color: #ff6b6b; }
+  input[type=range] { width: 100%; }
+  button { background: #16222f; color: #cfe0f0; border: 1px solid #2a3a4c; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+  button:hover { background: #1d2c3c; }
+  code { font-size: 12px; color: #9fd0ff; }
+  #banner { position: absolute; left: 12px; top: 10px; font-size: 12px; color: #8fa3b8; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="view"><div id="banner">6 chains × 17 capsule links · drag λ to attenuate the commanded motion</div></div>
+  <aside id="hud">
+    <h1>engine-repair-lab</h1>
+    <div class="sub">certificate locates · Rapier decides · same core in node and browser</div>
+    <div class="row"><span class="k">attenuation λ</span><span class="v" id="lam">1.000</span></div>
+    <input id="slider" type="range" min="0" max="1" step="0.001" value="0.8017">
+    <div class="row"><span class="k">worst sampled gap (all chains)</span><span class="v" id="gap">—</span></div>
+    <div class="row"><span class="k">status</span><span class="v" id="status">—</span></div>
+    <div class="row"><span class="k">certificate @ λ=1 (node)</span><span class="v" id="nodeev">—</span></div>
+    <div class="row"><span class="k">Rapier after repair (node)</span><span class="v" id="enginev">—</span></div>
+    <div class="row"><span class="k">EE deviation (node)</span><span class="v" id="dev">—</span></div>
+    <button id="run">Run the certificate in this browser</button>
+    <div id="runout" class="sub" style="margin-top:8px">recomputes certify() with the same N0=600 as node, then compares the fingerprint baked into data/chains.json</div>
+    <div class="row"><span class="k">browser certificate</span><span class="v" id="br">—</span></div>
+    <div class="row"><span class="k">fingerprint vs node</span><span class="v" id="fp">—</span></div>
+  </aside>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

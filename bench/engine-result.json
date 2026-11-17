@@ -1,0 +1,96 @@
+{
+  "engine": "rapier3d-compat",
+  "version": "0.14.0",
+  "hz": 240,
+  "stepsPerRun": 480,
+  "chains": [
+    {
+      "id": "chain-1",
+      "lambda": 0.8017,
+      "nominal": {
+        "hitPairs": 3,
+        "maxPenMm": -37.5,
+        "firstHitT": 1.783333
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    },
+    {
+      "id": "chain-2",
+      "lambda": 0.7355,
+      "nominal": {
+        "hitPairs": 4,
+        "maxPenMm": -37.5,
+        "firstHitT": 1.741667
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    },
+    {
+      "id": "chain-3",
+      "lambda": 0.6695,
+      "nominal": {
+        "hitPairs": 5,
+        "maxPenMm": -38.1,
+        "firstHitT": 1.704167
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    },
+    {
+      "id": "chain-4",
+      "lambda": 0.7824,
+      "nominal": {
+        "hitPairs": 3,
+        "maxPenMm": -37.5,
+        "firstHitT": 0
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    },
+    {
+      "id": "chain-5",
+      "lambda": 0.7724,
+      "nominal": {
+        "hitPairs": 3,
+        "maxPenMm": -37.5,
+        "firstHitT": 1.766667
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    },
+    {
+      "id": "chain-6",
+      "lambda": 0.9917,
+      "nominal": {
+        "hitPairs": 1,
+        "maxPenMm": -3.13,
+        "firstHitT": 0
+      },
+      "repaired": {
+        "hitPairs": 0,
+        "maxPenMm": 0,
+        "firstHitT": null
+      }
+    }
+  ],
+  "steps": 5760,
+  "totalSteps": 5760,
+  "maxPenetrationRepairedMm": 0,
+  "repairedPenetratingChains": 0
+}

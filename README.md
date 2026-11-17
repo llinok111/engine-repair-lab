@@ -32,6 +32,7 @@ This is an original tool. It is not a fork and does not copy another repository.
 node tools/gen-sample.mjs          # deterministic corpus + baked repair (10 s)
 node bench/verify.mjs              # 26 assertions, no dependencies
 node bench/bench.mjs               # 1 warmup + 7 reps -> bench/result.json
+node bench/independent.mjs         # re-derives FK + segment distance without importing core
 ```
 
 Engine replay needs one pinned package (the only dependency; not vendored):
@@ -61,6 +62,7 @@ changes λ live. "Run the certificate in this browser" recomputes `certify()` wi
 | engine on nominal motion | **19 hit pairs** (3/4/5/3/3/1), depth match ≤ 0.05 mm |
 | engine after repair | **0/6 chains with any contact, 0.00 mm** |
 | frame-rate sweep | at 4× speed: certificate **7** events, 240 Hz scan **5** hits (misses 2) |
+| independent reimplementation (no shared code) | **6/6 chains match ≤ 0.01 mm**; chain-6 −3.13 mm |
 | scale sweep | identical verdict at 1e-3×, 0.1×, 1×, 10× (6 orders of magnitude) |
 
 ## 本轮创新
@@ -106,6 +108,7 @@ baseline/naive.mjs       240 Hz discrete scan (the baseline the promise is measu
 bench/verify.mjs         26 assertions, exit code 0/1
 bench/bench.mjs          timing -> bench/result.json
 bench/engine.mjs         Rapier replay -> bench/engine-result.json
+bench/independent.mjs    second implementation (nested bisection, no core import)
 tools/gen-sample.mjs     deterministic corpus + baked λ and certificate fingerprints
 data/chains.json         generated; byte-identical on every run (no RNG)
 ```
